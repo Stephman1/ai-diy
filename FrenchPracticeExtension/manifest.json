@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "French Practice Extension",
+  "version": "1.0",
+  "description": "Practice French reading and listening with daily headlines and video from Le Monde and Piece of French.",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": [
+    "https://www.lemonde.fr/*",
+    "https://www.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
