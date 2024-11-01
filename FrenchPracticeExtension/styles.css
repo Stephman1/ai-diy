@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    width: 300px;
+}
+
+h1, h2 {
+    font-size: 1.5em;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#news-snippet {
+    margin-bottom: 10px;
+}

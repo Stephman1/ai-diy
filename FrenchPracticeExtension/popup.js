@@ -1,70 +1,39 @@
-const headlineElement = document.getElementById('headline');
-const videoFrame = document.getElementById('videoFrame');
-const newContentButton = document.getElementById('newContent');
+const newsApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://www.lemonde.fr/rss/une.xml';
+const youtubePlaylistId = 'PLmK-vbXTxuypeIF5rXp_MlI9SkXcNQacV';
 
-// Playlist URL for the Piece of French channel
-const PLAYLIST_URL = 'https://www.youtube.com/playlist?list=PLmK-vbXTxuypeIF5rXp_MlI9SkXcNQacV';
+function fetchNewsSnippet() {
+    fetch(newsApiUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Get all articles
+            const items = data.items;
+            if (items && items.length > 0) {
+                // Select a random article
+                const randomIndex = Math.floor(Math.random() * items.length);
+                const selectedArticle = items[randomIndex];
 
-async function fetchReadingContent() {
-  try {
-    const response = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.lemonde.fr/rss/une.xml");
-    const data = await response.json();
-
-    if (data.items && data.items.length > 0) {
-      const randomIndex = Math.floor(Math.random() * data.items.length);
-      const headline = data.items[randomIndex].title;
-      const description = data.items[randomIndex].description;
-      const link = data.items[randomIndex].link;
-
-      // Display the headline and description in the popup
-      headlineElement.innerHTML = `<a href="${link}" target="_blank">${headline}</a><br>${description}`;
-
-      // Fetch a random video from the playlist
-      await fetchRandomVideo();
-
-    } else {
-      headlineElement.innerText = "Could not fetch reading content.";
-      videoFrame.src = ''; // Clear video frame if content is not available
-    }
-
-  } catch (error) {
-    console.error("Error fetching reading content: ", error);
-    headlineElement.innerText = "Error loading reading content.";
-    videoFrame.src = ''; // Clear video frame on error
-  }
+                const snippet = selectedArticle.title;
+                const snippetLink = selectedArticle.link;
+                document.getElementById('news-snippet').innerHTML = `<a href="${snippetLink}" target="_blank">${snippet}</a>`;
+            } else {
+                document.getElementById('news-snippet').innerText = "No news available";
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching news snippet:', error);
+            document.getElementById('news-snippet').innerText = 'Erreur lors de la récupération des nouvelles.';
+        });
 }
 
-async function fetchRandomVideo() {
-  try {
-    const response = await fetch(PLAYLIST_URL);
-    const text = await response.text();
-
-    // Use a regex to extract video IDs from the page
-    const videoIds = [];
-    const videoRegex = /"videoId":"([^"]+)"/g;
-    let match;
-
-    while ((match = videoRegex.exec(text)) !== null) {
-      videoIds.push(match[1]);
-    }
-
-    if (videoIds.length > 0) {
-      const randomVideoId = videoIds[Math.floor(Math.random() * videoIds.length)];
-      videoFrame.src = `https://www.youtube.com/embed/${randomVideoId}?autoplay=1`;
-    } else {
-      console.warn("No videos found in the playlist.");
-      videoFrame.src = ''; // Clear video frame if no valid videos found
-    }
-  } catch (error) {
-    console.error("Error fetching video content: ", error);
-    videoFrame.src = ''; // Clear video frame on error
-  }
+function getRandomVideo() {
+    // Create a random index based on the number of videos in the playlist
+    const totalVideos = 15; // Update this with the actual number of videos in your playlist
+    const randomIndex = Math.floor(Math.random() * totalVideos);
+    const videoUrl = `https://www.youtube.com/embed?list=${youtubePlaylistId}&index=${randomIndex}`;
+    document.getElementById('youtube-video').src = videoUrl;
 }
 
-// Add event listener to the button to fetch new content
-newContentButton.addEventListener('click', fetchReadingContent);
-
-// Initial fetch for reading content when the popup is opened
-fetchReadingContent();
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    fetchNewsSnippet();
+    getRandomVideo();
+});

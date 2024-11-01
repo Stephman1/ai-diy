@@ -1,28 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>French Practice</title>
-  <style>
-    body {
-      width: 400px; /* Increased width for better readability */
-      height: 400px; /* Increased height to accommodate video */
-      font-family: Arial, sans-serif;
-      padding: 10px;
-    }
-    iframe {
-      width: 100%;
-      height: 200px; /* Adjust height as needed */
-      border: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Learn French</title>
 </head>
 <body>
-  <h1>French Practice</h1>
-  <div id="headline">Loading reading content...</div>
-  <br>
-  <iframe id="videoFrame" src="" allowfullscreen></iframe> <!-- Iframe for embedding video -->
-  <br>
-  <button id="newContent">Get New Content</button>
+    <div id="content">
+        <h1>Actualités</h1>
+        <div id="news-snippet"></div>
+        <h2>Vidéo à regarder</h2>
+        <iframe id="youtube-video" width="100%" height="200" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script src="popup.js"></script>
 </body>
-<script src="popup.js"></script>
 </html>
