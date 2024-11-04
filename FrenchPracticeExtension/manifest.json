@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "French Practice Extension",
+    "name": "French Learning Extension",
     "version": "1.0",
     "description": "Learn French by reading news and listening to videos.",
     "permissions": [
@@ -8,7 +8,7 @@
     ],
     "action": {
         "default_popup": "popup.html",
-        "default_icon": {}
+        "default_icon": "french-flag.png"
     },
     "content_security_policy": {
         "extension_pages": "script-src 'self'; object-src 'self';"
