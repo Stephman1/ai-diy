@@ -1,5 +1,13 @@
 # FAQs
 
+`AI DIY Episode 1: Creating a French Language Learning Browser Extension with ChatGPT` is available on [YouTube](https://youtu.be/S96Mbqo6fu8?si=GHxNkybAlTEjlQfJ).
+
+## What did you build in this episode?
+
+A Chrome browser extension that helps me to learn French when I am browsing the web. Each time I load the extension it connects to a News article from the Le Monde website and a French-language YouTube video from a playlist.
+
+![French Practice Chrome extension](https://github.com/user-attachments/assets/a5c3cf56-4abb-486b-9f9b-4217ce1f0e34)
+
 ## Can I build the Chrome extension with the code in this folder?
 
 Yes, if you upload this folder (exclude this README file) into Chrome browser the French learning extension should work as shown in the [video](https://youtu.be/S96Mbqo6fu8?si=K_c-Xuei_ljMcIiI&t=436).
@@ -28,9 +36,16 @@ No, I only used the free version of ChatGPT to make the French learning extensio
 
 I copied and pasted the relevant code given by ChatGPT into four files on my local computer named `popup.html`, `popup.js`, `manifest.json` and `styles.css`. You can use a standard text editor like Notepad (pre-installed on Windows) or TextEdit (pre-installed on Mac) and save the file as `popup.html` or `popup.js`. You do not need any other application to create HTML and JavaScript files.
 
+## Do I have to use Chrome?
+
+I use the Chrome browser for accessing the web. Please tell ChatGPT if you want to build the extension for another browser that you use.
+
+## Do I have to use ChatGPT as my Generative AI assistant?
+
+Not necessarily, I am thinking of using Gemini for other episodes of AI DIY.
+
 ## URLs used in the episode
 
 Connect to Le Monde News through a [RSS feed](https://www.lemonde.fr/actualite-medias/article/2019/08/12/les-flux-rss-du-monde-fr_5498778_3236.html): https://api.rss2json.com/v1/api.json?rss_url=https://www.lemonde.fr/rss/une.xml
 
 Connect to a YouTube playlist: https://www.youtube.com/playlist?list=PLmK-vbXTxuypeIF5rXp_MlI9SkXcNQacV
-
