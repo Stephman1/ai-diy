@@ -11,3 +11,5 @@ Here you can find the code produced in the making of all AI DIY episodes. AI DIY
 The code for each episode can be viewed in and downloaded from this repository.
 
 [Episode 1: French Language Learning Chrome Extension](FrenchPracticeExtension/)
+
+[Episode 2: Break Reminder App](BreakReminderApp/)
