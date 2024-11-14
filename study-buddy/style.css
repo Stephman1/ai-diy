@@ -1,0 +1,100 @@
+/* Basic styling for the popup */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 250px;
+}
+
+/* Styling for the question */
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* Styling for the answers */
+.answers {
+  list-style-type: none;
+  padding: 0;
+}
+
+.answer {
+  background-color: #e6f7ff;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.answer:hover {
+  background-color: #cce5ff;
+  transform: scale(1.05);
+}
+
+.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+/* Styling for the navigation buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Styling for the reload button */
+#reload-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#reload-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Add a simple border to the popup for structure */
+.popup-container {
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+}

@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "question": "Wat is de hoofdstad van Nederland?",
+      "answers": [
+        "Amsterdam",
+        "Rotterdam",
+        "Utrecht",
+        "Den Haag"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Hoe heet het nationale gerecht van Nederland?",
+      "answers": [
+        "Bitterballen",
+        "Poffertjes",
+        "Stamppot",
+        "Haring"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Wat is de grootste stad van Nederland?",
+      "answers": [
+        "Rotterdam",
+        "Den Haag",
+        "Utrecht",
+        "Amsterdam"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Wie was de eerste koning van Nederland?",
+      "answers": [
+        "Koning Willem II",
+        "Koning Willem I",
+        "Koning Willem III",
+        "Koning Albert"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Wat is de officiële taal van Nederland?",
+      "answers": [
+        "Frans",
+        "Duits",
+        "Nederlands",
+        "Engels"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Wat is de meest bekende windmolen in Nederland?",
+      "answers": [
+        "De Zaanse Schans",
+        "Kinderdijk",
+        "De Deltawerken",
+        "De Molens van Amsterdam"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Hoe heet de zee die Nederland in het westen begrenst?",
+      "answers": [
+        "Zee van Noord",
+        "Waddenzee",
+        "Ijsselmeer",
+        "Zuiderzee"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Wat is de belangrijkste rivier die door Nederland stroomt?",
+      "answers": [
+        "De Maas",
+        "De Rijn",
+        "De Schelde",
+        "De IJssel"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Wat is het grootste dierenpark in Nederland?",
+      "answers": [
+        "Artis",
+        "Ouwehands Dierenpark",
+        "Beekse Bergen",
+        "Dierenpark Amersfoort"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Wat is de naam van het beroemde Nederlandse schilderij van Rembrandt?",
+      "answers": [
+        "De Nachtwacht",
+        "De Sterrennacht",
+        "Het meisje met de parel",
+        "De School van Athens"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

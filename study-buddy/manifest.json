@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "AI-Powered Study Buddy",
+  "version": "1.0",
+  "description": "Get quizzes on any topic to help with study preparation.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

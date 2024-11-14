@@ -1,0 +1,175 @@
+{
+	"questions": [
+	  {
+		"question": "What is load balancing in the context of web servers?",
+		"answers": [
+		  "Distributing traffic evenly across multiple servers to prevent overload.",
+		  "Using one server to handle all requests from clients.",
+		  "Prioritizing specific types of traffic over others."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "Which of the following is a benefit of load balancing?",
+		"answers": [
+		  "Improved redundancy and fault tolerance.",
+		  "Lower bandwidth usage.",
+		  "Less need for security."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What does a load balancer do when one server becomes overloaded?",
+		"answers": [
+		  "Directs new traffic to a less loaded server.",
+		  "Shuts down the overloaded server.",
+		  "Sends an error message to users."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "Which algorithm is commonly used in load balancing to distribute traffic evenly?",
+		"answers": [
+		  "Round-robin.",
+		  "First-come, first-served.",
+		  "Priority scheduling."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What is a key advantage of using a load balancer in a distributed system?",
+		"answers": [
+		  "It ensures optimal resource utilization and prevents server overload.",
+		  "It simplifies database management.",
+		  "It decreases the security risks."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "Which of the following is a type of load balancing?",
+		"answers": [
+		  "Layer 4 load balancing.",
+		  "Single server balancing.",
+		  "Vertical load balancing."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What does Layer 7 load balancing involve?",
+		"answers": [
+		  "Distributing traffic based on application-level information like HTTP headers.",
+		  "Balancing traffic between different physical locations.",
+		  "Dividing traffic based on server IP addresses."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "How does DNS-based load balancing work?",
+		"answers": [
+		  "It resolves domain names to different IP addresses to distribute traffic.",
+		  "It uses HTTP headers to redirect users to specific servers.",
+		  "It balances traffic based on the user’s geographic location."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What happens when a server in a load-balanced system fails?",
+		"answers": [
+		  "Traffic is rerouted to other servers that are still functional.",
+		  "All traffic is halted until the server is repaired.",
+		  "The server automatically reboots and continues to handle traffic."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "Which of the following is a common technique for health checking in load balancing?",
+		"answers": [
+		  "Periodically checking server performance and availability.",
+		  "Only testing the servers when new traffic is added.",
+		  "Testing server speed during low traffic periods."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What is the primary role of a load balancer in a cloud-based environment?",
+		"answers": [
+		  "To distribute network traffic across multiple cloud instances.",
+		  "To store application data securely.",
+		  "To monitor server logs for security threats."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "Which protocol is commonly used in Layer 4 load balancing?",
+		"answers": [
+		  "TCP/IP.",
+		  "HTTP.",
+		  "FTP."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What does 'scaling horizontally' refer to in the context of load balancing?",
+		"answers": [
+		  "Adding more servers to handle increased traffic.",
+		  "Increasing the storage capacity of a single server.",
+		  "Enhancing the security of the system."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "How can load balancing help improve the performance of a website?",
+		"answers": [
+		  "By spreading traffic across multiple servers, reducing bottlenecks.",
+		  "By limiting the number of visitors a website can serve.",
+		  "By focusing on one server's capacity rather than distributing traffic."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "Which of the following load balancing methods is based on client IP addresses?",
+		"answers": [
+		  "IP hash.",
+		  "Round-robin.",
+		  "Least connections."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What is the primary challenge when configuring load balancing for web applications?",
+		"answers": [
+		  "Ensuring that sessions are consistently handled across multiple servers.",
+		  "Managing the database connection across servers.",
+		  "Ensuring that all servers are physically located in the same data center."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What is SSL termination in the context of load balancing?",
+		"answers": [
+		  "Decrypting SSL traffic at the load balancer before forwarding it to the backend servers.",
+		  "Encrypting traffic before sending it to the load balancer.",
+		  "Managing SSL certificates for individual servers."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "What is a sticky session in load balancing?",
+		"answers": [
+		  "A session that is consistently routed to the same server for the duration of the session.",
+		  "A session that switches servers randomly.",
+		  "A session that remains inactive after a user logs out."
+		],
+		"correctAnswer": 0
+	  },
+	  {
+		"question": "Which of the following is true about load balancing in a microservices architecture?",
+		"answers": [
+		  "Load balancing helps distribute requests to the appropriate microservices based on traffic.",
+		  "Load balancing is not necessary because each microservice handles its own traffic.",
+		  "Load balancing is used only for internal communication between services."
+		],
+		"correctAnswer": 0
+	  }
+	]
+}

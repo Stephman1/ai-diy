@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "question": "Quelle est la différence entre 'imparfait' et 'passé composé' en français ?",
+      "answers": [
+        "L’imparfait est utilisé pour des actions ponctuelles, tandis que le passé composé est utilisé pour des actions habituelles.",
+        "L’imparfait décrit des actions passées, tandis que le passé composé indique des événements achevés.",
+        "L’imparfait est utilisé uniquement dans les récits, alors que le passé composé est formel."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Conjuguez le verbe 'faire' au subjonctif présent (que je…):",
+      "answers": [
+        "fasse",
+        "fait",
+        "fais"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Quel est le participe passé du verbe 'voir' ?",
+      "answers": [
+        "vu",
+        "vois",
+        "voir"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Complétez la phrase : 'Si j’avais su, je _____ à la fête.'",
+      "answers": [
+        "serai allé",
+        "serai allée",
+        "serais allé"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Quel pronom relatif doit être utilisé dans la phrase suivante : 'C'est la personne _____ j’ai rencontré hier.'",
+      "answers": [
+        "qui",
+        "que",
+        "dont"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Complétez avec la bonne préposition : 'Elle va _____ cinéma ce soir.'",
+      "answers": [
+        "à",
+        "en",
+        "au"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Comment dit-on 'he/she/it would have been' en français ?",
+      "answers": [
+        "Il/elle aurait été",
+        "Il/elle est",
+        "Il/elle a été"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Quelle est la traduction correcte de 'Despite the fact that it was raining, they went to the park' en français ?",
+      "answers": [
+        "Bien que il pleuvait, ils sont allés au parc.",
+        "Malgré que il pleuvait, ils sont allés au parc.",
+        "Malgré la pluie, ils sont allés au parc."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Quel est l’accord du verbe dans cette phrase : 'Les filles _____ parties tôt.'",
+      "answers": [
+        "est",
+        "sont",
+        "a"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Complétez avec le bon pronom réfléchi : 'Elle s’est _____.'",
+      "answers": [
+        "lavée",
+        "lavé",
+        "lavant"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Choisissez la bonne traduction de 'I had been waiting for an hour before he arrived' :",
+      "answers": [
+        "J'attendais depuis une heure quand il est arrivé.",
+        "J'avais attendu pendant une heure avant qu'il soit arrivé.",
+        "J'étais en train d'attendre pendant une heure avant qu'il soit arrivé."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}
