@@ -29,7 +29,7 @@ function showWarningOverlay() {
     
     overlay.innerHTML = `
       <div style="text-align: center;">
-        <img src="${chrome.runtime.getURL("warning.png")}" alt="Warning" />
+        <img src="${chrome.runtime.getURL("warning.gif")}" alt="Warning" />
         <p>You have reached your 50-click limit.</p>
         <button id="continueButton">Continue Anyway</button>
       </div>
@@ -47,4 +47,3 @@ function showWarningOverlay() {
 document.addEventListener("click", () => {
   checkClickCount();
 });
-

@@ -19,7 +19,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["warning.png"],
+      "resources": ["warning.gif"],
       "matches": ["https://www.rightmove.co.uk/*"]
     }
   ]
