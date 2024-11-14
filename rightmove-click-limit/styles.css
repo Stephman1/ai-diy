@@ -1,0 +1,33 @@
+/* Popup styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#resetButton {
+  margin-top: 10px;
+}
+
+/* Overlay styling */
+#warningOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlayContent {
+  text-align: center;
+}
+
+.overlayContent img {
+  width: 100px;
+}

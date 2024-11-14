@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Rightmove Click Limiter",
+  "version": "1.0",
+  "description": "Limits browsing on Rightmove to 50 clicks every 24 hours.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "house.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.rightmove.co.uk/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
