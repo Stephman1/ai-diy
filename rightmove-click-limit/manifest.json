@@ -16,5 +16,12 @@
       "matches": ["https://www.rightmove.co.uk/*"],
       "js": ["content.js"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["warning.png"],
+      "matches": ["https://www.rightmove.co.uk/*"]
+    }
   ]
 }
+
