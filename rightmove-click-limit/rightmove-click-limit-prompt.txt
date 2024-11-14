@@ -1,0 +1,7 @@
+I want to create a Chrome extension called 'Rightmove Click Limiter' that limits browsing on the Rightmove website to 50 clicks every 24 hours. The extension should:
+
+Track the number of clicks on the Rightmove website and decrement by one for each click.
+When the 50-click limit is reached, it should display a full-screen overlay with a warning message and a 'Continue Anyway' button.
+Prevent the page from loading any further until 'Continue Anyway' is clicked.
+Display the remaining clicks in a popup window with a reset button, which resets the count to 50.
+Please provide all code files required and any necessary images (use a placeholder image like 'warning.gif' and 'house.png' as the icon). Also, include instructions for loading this extension into Chrome, assuming I don’t have JavaScript knowledge.
