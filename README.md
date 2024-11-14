@@ -13,3 +13,5 @@ The code for each episode can be viewed in and downloaded from this repository.
 [Episode 1: French Language Learning Chrome Extension](FrenchPracticeExtension/)
 
 [Episode 2: Break Reminder App](BreakReminderApp/)
+
+[Study Buddy Chrome Extension](study-buddy/)
