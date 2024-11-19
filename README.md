@@ -15,3 +15,5 @@ The code for each episode can be viewed in and downloaded from this repository.
 [Episode 2: Break Reminder App](BreakReminderApp/)
 
 [Study Buddy Chrome Extension](study-buddy/)
+
+[Episode 3: Rightmove Click Limit Extension](rightmove-click-limit/)
