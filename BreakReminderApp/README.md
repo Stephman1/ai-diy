@@ -19,7 +19,7 @@ I would suggest entering a prompt along these lines (please refine it as necessa
 
 `I want a programme that reminds me to take a 10 minute break every one or two hours. Every four hours I want the programme to remind me to take a 30 mins walk outside or have a lunch break. I want to come back from the break and know how long I have been away for. I then want to reset the timer for another one or two hours. I want the programme to have a simple and usable interface that allows me to easily view the timings and set the timer. I would like it to have a popup or alert function when it's time to take a break. I would like the programme to run on my desktop computer. I would like the code to be packaged so that it can run in an executable file. I want to only have to click on the executable file and it will run the programme until I choose to close it. I would like to be able to minimise and resize the interface. Can you give me the code for this programme?`
 
-ChatGPT should give you the Python code to run in an executable file. Copy and paste the Python code into a file on your local computer.
+ChatGPT should give you the Python code to run in an executable file. Copy and paste the Python code into a file on your local computer. Save the file as `break_reminder.py`.
 
 ### Install Python (Mac users should be able to skip this step)
 
@@ -61,10 +61,10 @@ cd path\to\your\script\folder
 
 ### Create executable with Pyinstaller
 
-Once you have navigated in the terminal to the folder containing your Python file create the executable with Pyinstaller
+Once you have navigated in the Terminal to the folder containing your Python file create the executable with Pyinstaller
 
 ```
 pyinstaller --onefile --windowed break_reminder.py
 ```
 
-After running this command, go to the created Dist folder and there should be an executable file called `break_reminder.exe`. You can run the break reminder app by simply double clicking on this executable file. You can move to file to whatever location you wish. I moved it to my desktop folder.
+After running this command, go to the created `Dist` folder and there should be an executable file called `break_reminder.exe`. You can run the break reminder app by simply double clicking on this executable file. You can move the file to whatever location you wish. I moved it to my desktop folder.
