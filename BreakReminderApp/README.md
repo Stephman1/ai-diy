@@ -23,7 +23,7 @@ ChatGPT should give you the Python code to run in an executable file. Copy and p
 
 ### Install Python (Mac users should be able to skip this step)
 
-Check if Python is already installed by typing into Terminal or Command Prompt:
+Check if Python is already installed by typing into the Terminal or Windows Command Prompt:
 
 ```
 python --version
@@ -35,7 +35,7 @@ or possibly
 python3 --version
 ```
 
-If Python is not installed then you will to first download Python from the [Python website](https://www.python.org/downloads/) (it's free).
+If Python is not installed then you will need to first download Python from the [Python website](https://www.python.org/downloads/) (Python is free).
 
 ### Install Pyinstaller
 
