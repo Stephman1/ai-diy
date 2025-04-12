@@ -4,6 +4,7 @@
 # Data
 **.docx
 **.pdf
+*/chapter_scripts/
 
 # Environment
 .env

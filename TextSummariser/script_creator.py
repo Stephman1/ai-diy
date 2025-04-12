@@ -1,19 +1,78 @@
 """
-This script creates a script for a YouTube video short based on a text input from a Word document or PDF file.
+This script creates YouTube short scripts for each chapter of a dissertation.
 """
 
 from docx.api import Document
 from PyPDF2 import PdfReader
 from openai import OpenAI
 from dotenv import load_dotenv
+import re
+import os
+from pathlib import Path
 
 load_dotenv()
 
 client = OpenAI()
 
 # Constants
-MODEL = "gpt-4o-2024-11-20"
+MODEL = "gpt-4o"
+CHAPTER_PATTERNS = [
+    r'^Chapter\s+\d+',  # Matches "Chapter 1", "Chapter 2", etc.
+    r'^\d+\.\s+',       # Matches "1. ", "2. ", etc.
+    r'^CHAPTER\s+\d+',  # Matches "CHAPTER 1", "CHAPTER 2", etc.
+    r'^\d+\.\d+\.\s+',  # Matches "1.1. ", "1.2. ", etc.
+]
 
+def detect_chapters(text: str) -> list[tuple[str, str]]:
+    """Detect chapters in the text and return them as (title, content) pairs
+    
+    Args:
+        text (str): The full text of the document
+        
+    Returns:
+        list[tuple[str, str]]: List of (chapter_title, chapter_content) pairs
+    """
+    # Split text into lines
+    lines = text.split('\n')
+    chapters = []
+    current_chapter = []
+    current_title = None
+    
+    for line in lines:
+        # Check if this line matches any chapter pattern
+        is_chapter = any(re.match(pattern, line.strip()) for pattern in CHAPTER_PATTERNS)
+        
+        if is_chapter:
+            # If we have a previous chapter, save it
+            if current_title and current_chapter:
+                chapters.append((current_title, '\n'.join(current_chapter)))
+            
+            # Start new chapter
+            current_title = line.strip()
+            current_chapter = []
+        else:
+            current_chapter.append(line)
+    
+    # Add the last chapter
+    if current_title and current_chapter:
+        chapters.append((current_title, '\n'.join(current_chapter)))
+    
+    return chapters
+
+def create_chapter_filename(chapter_title: str) -> str:
+    """Create a valid filename from a chapter title
+    
+    Args:
+        chapter_title (str): The chapter title
+        
+    Returns:
+        str: A valid filename
+    """
+    # Remove special characters and replace spaces with underscores
+    filename = re.sub(r'[^\w\s-]', '', chapter_title)
+    filename = re.sub(r'\s+', '_', filename)
+    filename = filename.lower()
+    return f"{filename}.txt"
 
 def read_word_doc(file_path: str) -> str:
     """Read content from a Word document
@@ -152,14 +211,14 @@ def summarize_text(text: str) -> str:
     return final_response.output[0].content[0].text
 
 
-def process_document(file_path: str) -> str:
-    """Process document and create summary
+def process_document(file_path: str) -> list[str]:
+    """Process document and create summaries for each chapter
     
     Args:
         file_path (str): The path to the document
         
     Returns:
-        str: The path to the summary file
+        list[str]: List of paths to the summary files
     """
     # Determine file type and read content
     if file_path.lower().endswith('.docx'):
@@ -170,19 +229,39 @@ def process_document(file_path: str) -> str:
         raise ValueError("Unsupported file format. Please use .docx or .pdf")
     
     print(f"Content read from file: {file_path.split('/')[-1]}")
-
-    # Generate summary
-    summary = summarize_text(content)
     
-    # Save summary to file
-    output_path = 'TextSummariser/summary_output.txt'
-    with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(summary)
+    # Detect chapters
+    chapters = detect_chapters(content)
+    print(f"Found {len(chapters)} chapters")
     
-    return output_path
+    # Create output directory if it doesn't exist
+    output_dir = Path('TextSummariser/chapter_scripts')
+    output_dir.mkdir(exist_ok=True)
+    
+    output_paths = []
+    
+    # Process each chapter
+    for i, (title, content) in enumerate(chapters, 1):
+        print(f"\nProcessing chapter {i}: {title}")
+        
+        # Generate summary
+        summary = summarize_text(content)
+        
+        # Create filename and save
+        filename = create_chapter_filename(title)
+        output_path = output_dir / filename
+        
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(f"Chapter: {title}\n\n")
+            f.write(summary)
+        
+        output_paths.append(str(output_path))
+        print(f"Script saved to {output_path}")
+    
+    return output_paths
 
 
 if __name__ == "__main__":
-    file_path = "/Users/stephenkeeler/git/ai-diy/TextSummariser/lse_dissertation.docx"  # Change this to your input file path
-    output_path = process_document(file_path)
-    print(f"Summary saved to {output_path}")
+    file_path = "/Users/stephenkeeler/git/ai-diy/TextSummariser/lse_dissertation.docx"
+    output_paths = process_document(file_path)
+    print(f"\nAll scripts saved. Total: {len(output_paths)}")
